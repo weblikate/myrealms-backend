@@ -18,6 +18,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     profile_picture = models.ImageField("Profile Picture",upload_to='media/images/profilePics', blank = True)
     website_url = models.URLField("Website URL",max_length=255, blank=True)
     is_blocked = models.BooleanField("Is Blocked", default=False)
+    is_staff=models.BooleanField("Is Staff",default=False)
     date_joined = models.DateTimeField(default=timezone.now)
 
     USERNAME_FIELD = 'email'

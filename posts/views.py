@@ -45,7 +45,10 @@ class WritePostsViewSet(viewsets.ModelViewSet):
     queryset = WritePosts.objects.all()
     permission_classes= [IsAuthenticated,]
     serializer_class = WritePostsSerializer
-
+writeview=WritePostsViewSet.as_view({
+    'get':'list',
+    'post':'create'
+})
 class ClickPostsViewSet(viewsets.ModelViewSet):
     queryset = ClickPosts.objects.all()
     permission_classes= [IsAuthenticated,]

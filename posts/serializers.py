@@ -4,7 +4,7 @@ from posts.models import *
 class WritePostsSerializer(serializers.ModelSerializer):
     class Meta:
         model = WritePosts
-        fields = ['writeContent', 'writeTimestamp', 'contributer']
+        fields = ['id','writeContent', 'writeTimestamp', 'contributer']
 
 class ClickPostsSerializer(serializers.ModelSerializer):
     class Meta:
